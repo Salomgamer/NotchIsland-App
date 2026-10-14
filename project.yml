@@ -17,14 +17,20 @@ targets:
     type: application
     platform: iOS
     sources:
-      - path: NotchIsland
+      - path: .
+        excludes:
+          - .github
+          - build_output
+          - Payload
     info:
-      path: NotchIsland/Info.plist
+      path: Info.plist
       properties:
         CFBundleDisplayName: NotchIsland
         UILaunchScreen: {}
         NSMotionUsageDescription: "NotchIsland reads your live step count to display it inside the floating island."
         NSAppleMusicUsageDescription: "NotchIsland reads your currently playing song to display it in the island."
+        NSLocationWhenInUseUsageDescription: "Used to keep the floating island active in the background outside the app."
+        NSLocationAlwaysAndWhenInUseUsageDescription: "Used to keep the floating island active in the background outside the app."
         UIBackgroundModes:
           - audio
           - location

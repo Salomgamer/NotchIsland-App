@@ -17,7 +17,7 @@ targets:
     type: application
     platform: iOS
     sources:
-      - NotchIsland
+      - path: NotchIsland
     info:
       path: NotchIsland/Info.plist
       properties:
